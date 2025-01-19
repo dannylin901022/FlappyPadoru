@@ -39,6 +39,7 @@ let hitSound = new Audio("./hitSound.wav");
 let passSound = new Audio("./passSound.wav");
 let bgm = new Audio("./bgm.mp3");
 bgm.loop = true;
+let clickPage = false;
 
 window.onload = () => {
     let board = document.getElementById("board");
@@ -64,8 +65,7 @@ window.onload = () => {
     setInterval(animatePadoru, 100);
     document.addEventListener("keydown", movePadoru);
     document.addEventListener("mousedown", movePadoru);
-
-    bgm.play();
+    
 }
 
 function update(){
@@ -177,6 +177,10 @@ function placeTrees(){
 }
 
 function movePadoru(e){
+    if(!clickPage){
+        bgm.play();
+        clickPage = true;
+    }
     if(e.code == "Space" || e.code == "KeyW" || e.code == "ArrowUp"){
         wingSound.play();
         velocityY = -8;
