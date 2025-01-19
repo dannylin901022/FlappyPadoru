@@ -31,7 +31,7 @@ let velocityY = 0;
 let gravity = 0.4;
 
 if(window.screen.height <= 850){
-    gravity = 0.01;
+    gravity = 0.07;
 }
 
 let gameOver = false;
