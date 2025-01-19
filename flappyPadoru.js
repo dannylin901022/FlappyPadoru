@@ -30,6 +30,10 @@ let velocityX = -2;
 let velocityY = 0;
 let gravity = 0.4;
 
+if(window.screen.height <= 640){
+    gravity = 0.1;
+}
+
 let gameOver = false;
 let score = 0;
 let totalSeconds = 0;
