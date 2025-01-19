@@ -30,8 +30,8 @@ let velocityX = -2;
 let velocityY = 0;
 let gravity = 0.4;
 
-if(window.screen.height <= 640){
-    gravity = 0.1;
+if(window.screen.height <= 768){
+    gravity = 0.01;
 }
 
 let gameOver = false;
@@ -70,6 +70,7 @@ window.onload = () => {
     document.addEventListener("keydown", movePadoru);
     document.addEventListener("mousedown", movePadoru);
     
+    console.log(gravity);
 }
 
 function update(){
